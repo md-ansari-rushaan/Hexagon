@@ -141,5 +141,6 @@ function mouseReleased(){
 function keyPressed(){
   if(keyCode === 32){
     slingShot.attach(this.ball);
+    gameState="onSling";
   }
 }
