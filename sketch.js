@@ -69,9 +69,16 @@ function draw() {
  
   //Engine.update(engine);
   //text(mouseX + ',' + mouseY, 10, 15);
-  textSize(20);
-  fill("lightyellow");
-  text("Drag the Hexagonal Stone and Release it, to launch it towards the blocks",100,30);
+  if(gameState=="onSling"){
+        textSize(20);
+        fill("lightyellow");
+        text("Drag the Hexagonal Stone and Release it, to launch it towards the blocks",100,30);
+  }
+  if(gameState=="launched"){
+      textSize(20);
+        fill("lightyellow");
+          text("Press Space To restart",100,50);
+  }
 
   ground.display();
   stand1.display();
@@ -115,6 +122,7 @@ function draw() {
   image(polygon_img ,ball.position.x,ball.position.y,40,40);
 
   slingShot.display();
+  
 
 }
 function mouseDragged(){
